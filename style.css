@@ -1,0 +1,221 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f0f10;
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header / Nav */
+.srp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background: #151515;
+  border-bottom: 2px solid #c62828;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.srp-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.srp-logo-main {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+
+.srp-logo-sub {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #c62828;
+  letter-spacing: 2px;
+}
+
+.srp-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  border: 1px solid transparent;
+  background: transparent;
+  color: #f5f5f5;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.1s;
+}
+
+.nav-link:hover {
+  border-color: #c62828;
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  background: #c62828;
+  border-color: #c62828;
+}
+
+/* Main layout */
+.srp-main {
+  max-width: 960px;
+  width: 100%;
+  margin: 1.5rem auto 2rem;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+  background: #141414;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid #252525;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #c62828;
+  padding-bottom: 0.4rem;
+}
+
+.tab-content h2 {
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ff5252;
+}
+
+.tab-content p {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+/* Lists */
+.bullet-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.rules-list {
+  padding-left: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.rules-list li {
+  margin-bottom: 0.4rem;
+}
+
+.rules-note {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+/* Staff */
+.staff-list {
+  list-style: none;
+  margin-bottom: 0.75rem;
+}
+
+.staff-list li {
+  padding: 0.25rem 0;
+}
+
+.staff-name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Links & code */
+a {
+  color: #ff7961;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.link-strong {
+  font-weight: 600;
+}
+
+code {
+  background: #212121;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.srp-footer {
+  text-align: center;
+  padding: 0.75rem 1rem 1rem;
+  font-size: 0.8rem;
+  color: #bdbdbd;
+  border-top: 1px solid #202020;
+  background: #101010;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .srp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .srp-nav {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* NUI close button */
+.close-nui {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+  background: #c62828;
+  color: #ffffff;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
